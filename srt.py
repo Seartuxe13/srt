@@ -20,7 +20,7 @@ def create_window(fullscreen=True):
         monitor_size[600, 600]
 
     
-window = pygame.display.set_mode((monitor_size[0], monitor_size[1]), pygame.RESIZABLE)
+window = pygame.display.set_mode((monitor_size[0], monitor_size[1]), pygame.FULLSCREEN)
 
 
 def window_color(color):
