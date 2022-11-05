@@ -20,7 +20,7 @@ def create_window(fullscreen=True):
         monitor_size[600, 600]
 
     
-window = pygame.display.set_mode((monitor_size[0], monitor_size[1]), pygame.FULLSCREEN)
+window = pygame.display.set_mode((monitor_size[0], monitor_size[1]), pygame.RESIZABLE)
 
 
 def window_color(color):
@@ -39,20 +39,6 @@ def SRT_setup():
     if keys[pygame.K_ESCAPE]:
         sys.exit()
 
-    if cooldown == False:
-        if keys[pygame.K_f]:
-            cooldown = True
-            
-            if fullscreen:
-                fullscreen = False
-                window = pygame.display.set_mode((monitor_size[0], monitor_size[1]), pygame.RESIZABLE)
-                pygame.time.delay(100)
-                cooldown = False
-            else:
-                fullscreen = True
-                window = pygame.display.set_mode((monitor_size[0], monitor_size[1]), pygame.FULLSCREEN)
-                pygame.time.delay(100)
-                cooldown = False
 
 def SRT_quit():
     sys.exit()
