@@ -82,3 +82,27 @@ def draw_player(path, x, y):
 
     except:
         print("Image Path Was Not Found")
+        
+def load_music(music_path):
+    try:
+        pygame.mixer.music.load("srt/" + music_path)
+    except:
+        print("Music file must be in the srt folder!")
+
+def play_music(loop=True):
+    if loop:
+        pygame.mixer.music.play(-1)
+    else:
+        pygame.mixer.music.play()
+
+def set_volume(volume=0.3):
+    pygame.mixer.music.set_volume(volume)
+
+def pause_music():
+    pygame.mixer.music.pause()
+
+def music_fadeout(milliseconds):
+    pygame.mixer.music.fadeout(milliseconds)
+
+def unload_music():
+    pygame.mixer.music.unload()
